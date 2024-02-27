@@ -413,7 +413,7 @@ func assembleRedemptionWithRevealTransaction(
 				PublicKeyScript: revealScript,
 			}
 			// OP_EQUALVERIFY OP_CHECKSIG?
-			p2wpkhScript, err := txscript.NewScriptBuilder().AddOp(txscript.OP_DUP).AppOP(txscript.OP_HASH160)AddData(revealScript).AddOp(txscript.OP_EQUALVERIFY).AppOP(txscript.OP_CHECKSIG).Script()
+			p2wpkhScript, err := txscript.NewScriptBuilder().AddOp(txscript.OP_DUP).AppOP(txscript.OP_HASH160).AddData(revealScript).AddOp(txscript.OP_EQUALVERIFY).AppOP(txscript.OP_CHECKSIG).Script()
 		default:
 			return nil, fmt.Errorf("unknown script type: [%v]", scriptType)
 		}
